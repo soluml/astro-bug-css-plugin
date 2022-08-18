@@ -7,6 +7,8 @@ function examplePlugin() {
     name: "example-plugin",
     transform: async function (code, id) {
       if (fileRegex.test(id)) {
+        console.log("I have been called for", id);
+
         return {
           code: "I am a replaced style sheet!",
           map: null,
